@@ -1,11 +1,14 @@
 ---
+output: html_document
+---
+---
 Reproducible Research: Peer Assessment 1
 ========================================
-With help from Fabian Linzberger (thanks Fabian :-) - this is how I work and follow 
-the same principles for this course.
+<!--  With help from Fabian Linzberger (thanks Fabian :-) - this is how I work and follow 
+the same principles for this course. -->
 
 
-## Loading and preprocessing the data
+### Loading and preprocessing the data
 
 ```{r}
 unzip("activity.zip")
@@ -29,8 +32,9 @@ barplot(steps.date$steps, names.arg=steps.date$date, xlab="date", ylab="steps")
 meanTotalStepsPerDay <- mean(steps.date$steps)
 medianTotalStepsPerDay <- median(steps.date$steps)
 ```
-Report: The mean total number of steps taken per day is r meanTotalStepsPerDay and the median total number of steps per day is r medianTotalStepsPerDay.
-
+Report: The mean total number of steps taken per day is `r meanTotalStepsPerDay` and the median total number of steps per day is `r medianTotalStepsPerDay`.  
+\  
+\  
 
 ## What is the average daily activity pattern?
 
@@ -49,9 +53,11 @@ plot(steps.interval, type="l")
 ```{r}
 max5MinIntSteps <- steps.interval$interval[which.max(steps.interval$steps)]
 ```
-Report: The 5-minute interval with the maximium number of steps is r max5MinIntSteps
+Report: The 5-minute interval with the maximium number of steps is the `r max5MinIntSteps` th  
+\  
+\  
 
-## Imputing missing values - this spelling with an 'm' was in original template ???
+## Input missing values
 
 5. Calculate and report the total number of missing values in the
    dataset (i.e. the total number of rows with `NA`s)
@@ -59,7 +65,8 @@ Report: The 5-minute interval with the maximium number of steps is r max5MinIntS
 ```{r}
 sumNAs <- sum(is.na(activity))
 ```
-Report: The total number of missing values is r sumNAs
+Report: The total number of missing values are `r sumNAs`.
+
 
 6. Devise a strategy for filling in all of the missing values in the
    dataset. The strategy does not need to be sophisticated. For
@@ -90,11 +97,13 @@ barplot(steps.date$steps, names.arg=steps.date$date, xlab="date", ylab="steps")
 meanTotalStepsPerDayNAsFilledIn <- mean(steps.date$steps)
 medianTotalStepsPerDayNAsFilledIn <- median(steps.date$steps)
 ```
-Report: The mean total number of steps taken per day is r meanTotalStepsPerDayNAsFilledIn
-and the median total number of steps per day is r medianTotalStepsPerDayNAsFilledIn.
+Report: The mean total number of steps taken per day is `r meanTotalStepsPerDayNAsFilledIn`
+and the median total number of steps per day is `r medianTotalStepsPerDayNAsFilledIn`.
 
 Observation: The impact of the missing data seems rather low, at least when
-estimating the total number of steps per day.
+estimating the total number of steps per day.  
+\  
+\  
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
