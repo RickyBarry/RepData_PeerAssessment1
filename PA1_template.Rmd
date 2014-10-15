@@ -57,7 +57,7 @@ Report: The 5-minute interval with the maximium number of steps is the `r max5Mi
 \  
 \  
 
-## Input missing values
+## Imputing missing values
 
 5. Calculate and report the total number of missing values in the
    dataset (i.e. the total number of rows with `NA`s)
