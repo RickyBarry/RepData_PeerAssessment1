@@ -27,7 +27,7 @@ steps.date <- aggregate(steps ~ date, data=activity, FUN=sum)
 barplot(steps.date$steps, names.arg=steps.date$date, xlab="date", ylab="steps")
 ```
 
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+![plot of chunk unnamed-chunk-2](figures/unnamed-chunk-2.png) 
 
 2. Calculate and report the **mean** and **median** total number of
    steps taken per day
@@ -53,7 +53,7 @@ steps.interval <- aggregate(steps ~ interval, data=activity, FUN=mean)
 plot(steps.interval, type="l")
 ```
 
-![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figures/unnamed-chunk-4.png) 
 
 4. Which 5-minute interval, on average across all the days in the
    dataset, contains the maximum number of steps?
@@ -108,7 +108,7 @@ steps.date <- aggregate(steps ~ date, data=activity, FUN=sum)
 barplot(steps.date$steps, names.arg=steps.date$date, xlab="date", ylab="steps")
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-8](figures/unnamed-chunk-8.png) 
 
 ```r
 meanTotalStepsPerDayNAsFilledIn <- mean(steps.date$steps)
@@ -158,4 +158,4 @@ for (type in c("weekend", "weekday")) {
 }
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10.png) 
+![plot of chunk unnamed-chunk-10](figures/unnamed-chunk-10.png) 
